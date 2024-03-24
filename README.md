@@ -1,10 +1,8 @@
 # Cyb3rPunk
 
-This an app that allows users to generate a random password based on the criteria they've selected. also helps users to test their password strength.
+## App philosophy
 
-The app use HTML, CSS, and Vanilla JavaScript, also most of the css is done with the help of Tailwind CSS.
-
-With the help of exress.js, the app is able to serve the static files, so the app can looks like (SPA) but it's not.
+The philosophy of is to look like a single page application, but it is not a single page application, it is a multi-page application, but the app is using the express.js to serve the static files to all the routes, so the app can looks like a single page application.
 
 ```javascript
 const express = require("express");
@@ -35,6 +33,9 @@ If you opened the `index.html` file directly in the browser, you will see the sa
 
 
 on the `index.html` file, you will see that the app is initialized with Navbar, main, and footer, and the main content is loaded with the help of JavaScript. so the app can looks like a single page application.
+
+
+The app check the route and load the content based on the route, 
 
 ## Features
 
