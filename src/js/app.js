@@ -1,4 +1,5 @@
 import { generatePassword } from "./generatePassword.js";
+import { passwordStrength } from "./PasswordStrengthChecker.js";
 
 if (window.location.pathname === "/generate-strong-password") {
   document.addEventListener("DOMContentLoaded", async () => {
@@ -55,6 +56,8 @@ if (window.location.pathname === "/generate-strong-password") {
       }, 3000);
     });
   });
+} else if (window.location.pathname === "/password-strength-checker") {
+    passwordStrength();
 } else {
   document.addEventListener("DOMContentLoaded", () => {
     // back to initial state
