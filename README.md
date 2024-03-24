@@ -2,7 +2,7 @@
 
 ## App philosophy
 
-The philosophy of is to look like a single page application, but it is not a single page application, it is a multi-page application, but the app is using the express.js to serve the static files to all the routes, so the app can looks like a single page application.
+The philosophy is to look like a single-page application, but it is not a single-page application, it is a multi-page application, but the app uses express.js to serve the static files to all the routes, so the app can look like a single-page application.
 
 ```javascript
 const express = require("express");
@@ -24,18 +24,18 @@ app.listen(PORT, () => {
 
 ```
 
-As you can see that the express.js is serving the static files to all the routes, so the app can looks like a single page application.
+As you can see express.js is serving the static files to all the routes, so the app can look like a single-page application.
 
 e.g. if you go to `http://localhost:3000/` or `http://localhost:3000/any-route` you will see the same page.
 
 
-If you opened the `index.html` file directly in the browser, you will see the same page, but the app will not work as expected, because the app is using the express.js to serve the static files.
+If you open the `index.html` file directly in the browser, you will see the same page, but the app will not work as expected, because the app is using express.js to serve the static files.
 
 
-on the `index.html` file, you will see that the app is initialized with Navbar, main, and footer, and the main content is loaded with the help of JavaScript. so the app can looks like a single page application.
+on the `index.html` file, you will see that the app is initialized with Navbar, main, and footer, and the main content is loaded with the help of JavaScript. so the app can look like a single-page application.
 
 
-The app check the route and load the content based on the route, 
+The app checks the route and loads the content based on the route, 
 
 ## Features
 
