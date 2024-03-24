@@ -31,6 +31,11 @@ As you can see that the express.js is serving the static files to all the routes
 e.g. if you go to `http://localhost:3000/` or `http://localhost:3000/any-route` you will see the same page.
 
 
+If you opened the `index.html` file directly in the browser, you will see the same page, but the app will not work as expected, because the app is using the express.js to serve the static files.
+
+
+on the `index.html` file, you will see that the app is initialized with Navbar, main, and footer, and the main content is loaded with the help of JavaScript. so the app can looks like a single page application.
+
 ## Features
 
 - Users can generate a random password
