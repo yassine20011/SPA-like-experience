@@ -35,7 +35,7 @@
                             </svg></button>
                         <!-- Dropdown menu -->
                         <div id="dropdownNavbar"
-                            class="z-10 hidden font-normal divide-y divide-gray-100 rounded-lg shadow w-44 absolute top-10 right-0">
+                            class="z-10 hidden font-normal divide-y bg-white divide-gray-100 rounded-lg shadow w-44 absolute top-10 right-0">
                             <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                                 <li>
                                     <a href="/generate-strong-password"
@@ -45,6 +45,10 @@
                                 <li>
                                     <a href="/password-strength-checker" class="block px-4 py-2 hover:bg-gray-300">Check
                                         Password Strength</a>
+                                </li>
+                                <li>
+                                    <a href="/leaked-password" class="block px-4 py-2 hover:bg-gray-300">Check Leaked
+                                        Password</a>
                                 </li>
                             </ul>
                             <div class="py-1">
@@ -83,6 +87,9 @@
                 </li>
                 <li>
                     <a href="/contact" class="block px-4 py-2 hover:bg-gray-300">Contact</a>
+                </li>
+                <li>
+                    <a href="/leaked-password" class="block px-4 py-2 hover:bg-gray-300">Check Leaked Password</a>
                 </li>
                 <li>
                     <a href="/sign-up" class="block px-4 py-2 hover:bg-gray-300">Sign Up</a>
@@ -127,6 +134,9 @@
     </script>
 
     <script type="module" src="./js/app.js"></script>
+
+    <!--  external scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
 
 </body>
 
