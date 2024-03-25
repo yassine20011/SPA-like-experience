@@ -23,20 +23,21 @@ export function pwnedPasswords() {
       });
 
     let checkbtn = document.getElementById("check");
-    let errorMessage = document.getElementById("error");
+    let toast = document.getElementById("toast");
 
     checkbtn.addEventListener("click", async () => {
       let input = document.getElementById("password");
       // reject input if it's empty
       if (input.value === "") {
-        errorMessage.classList.remove("hidden");
-        errorMessage.textContent = "Please enter a password";
-        errorMessage.style.color = "red";
+        toast.style.display = "block";
+        toast.textContent = "Please enter a password";
+        setTimeout(function () {
+          toast.style.display = "none";
+        }
+        , 3000);
         return;
       }
-      else {
-        errorMessage.classList.add("hidden")
-      }
+
 
       let message = document.getElementById("message");
       let hashedPassword = sha1(input.value);
