@@ -41,6 +41,7 @@ The app checks the route and loads the content based on the route,
 
 - Users can generate a random password
 - Users can test the strength of their password
+- Users can check if their password has been leaked
 
 ## Getting Started
 
