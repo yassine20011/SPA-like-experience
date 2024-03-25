@@ -1,5 +1,6 @@
 import { generatePassword } from "./generatePassword.js";
 import { passwordStrength } from "./PasswordStrengthChecker.js";
+import { pwnedPasswords } from "./leakedPassword.js";
 
 if (window.location.pathname === "/generate-strong-password") {
   document.addEventListener("DOMContentLoaded", async () => {
@@ -57,7 +58,9 @@ if (window.location.pathname === "/generate-strong-password") {
     });
   });
 } else if (window.location.pathname === "/password-strength-checker") {
-    passwordStrength();
+  passwordStrength();
+} else if (window.location.pathname === "/leaked-password") {
+  pwnedPasswords();
 } else {
   document.addEventListener("DOMContentLoaded", () => {
     // back to initial state
