@@ -1,4 +1,4 @@
-# Cyb3rPunk
+# CyberSafe
 
 ## App philosophy
 

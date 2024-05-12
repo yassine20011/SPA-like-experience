@@ -14,7 +14,7 @@ async function timesFound(url, hash) {
 
 export function pwnedPasswords() {
   document.addEventListener("DOMContentLoaded", async () => {
-    document.title = "cyb3rPunk | Pwning Passwords";
+    document.title = "CyberSafe | Pwning Passwords";
     await fetch("./snippets/leakedPassword.html")
       .then((response) => response.text())
       .then((data) => {

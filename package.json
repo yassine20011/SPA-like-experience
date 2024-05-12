@@ -1,7 +1,10 @@
 {
   "dependencies": {
+    "caniuse-lite": "^1.0.30001614",
     "express": "^4.19.1",
-    "sha1": "^1.1.1"
+    "fs": "^0.0.1-security",
+    "sha1": "^1.1.1",
+    "ws": "^8.17.0"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.1"

@@ -14,7 +14,7 @@ let criteria = {
 
 export function passwordStrength() {
   document.addEventListener("DOMContentLoaded", async () => {
-    document.title = "cyb3rPunk | Password Strength Checker";
+    document.title = "CyberSafe | Password Strength Checker";
 
     let response = await fetch("./snippets/PasswordStrengthChecker.html");
     let data = await response.text();
