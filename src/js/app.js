@@ -5,6 +5,7 @@ import { HomeContent } from "./HomeContent.js";
 import { signIn } from "./signIn.js";
 import { signUp } from "./signUp.js";
 import { store } from "./store.js";
+import { productDetails } from "./productDetails.js";
 
 
 let user = JSON.parse(localStorage.getItem("currentUser"));
@@ -64,8 +65,11 @@ if (window.location.pathname === "/generate-strong-password") {
     window.location.href = "/";
   }
   signUp();
-} else if (window.location.pathname === "/store"){
+} else if (window.location.pathname === "/store") {
   store();
+} else if  (window.location.pathname === "/product-details") {
+  productDetails();
+
 }
 else {
   document.addEventListener("DOMContentLoaded", async () => {
