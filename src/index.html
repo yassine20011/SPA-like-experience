@@ -1,153 +1,242 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
-    <title> CyberSafe </title>
+    <title>CyberSafe</title>
     <link href="./css/style.css" rel="stylesheet" />
     <link href="./css/store-SVG.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body class="flex flex-col min-h-screen">
-
+  <body class="flex flex-col min-h-screen">
     <nav class="py-4">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <!-- Logo -->
-            <div>
-                <a href="/" class="text-2xl font-bold text-gray-800">CyberSafe</a>
-            </div>
-            <!-- Navigation Links -->
-            <div class="hidden md:block">
-                <ul>
-                    <li class="inline-block px-4 py-2 text-gray-700"><a href="/">Home</a></li>
-                    <li class="inline-block px-4 py-2 text-gray-700"><a href="/store">Store</a></li>
-                    <li class="inline-block relative px-4 py-2 text-gray-700">
-                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-                            onclick="dropdownNavbarLink()" class="flex items-center">Services
-                            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                            </svg></button>
-                        <!-- Dropdown menu -->
-                        <div id="dropdownNavbar"
-                            class="z-10 hidden font-normal divide-y bg-white divide-gray-100 rounded-lg shadow w-44 absolute top-10 right-0">
-                            <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
-                                <li>
-                                    <a href="/generate-strong-password"
-                                        class="block px-4 py-2 hover:bg-gray-300">Generate
-                                        Password</a>
-                                </li>
-                                <li>
-                                    <a href="/password-strength-checker" class="block px-4 py-2 hover:bg-gray-300">Check
-                                        Password Strength</a>
-                                </li>
-                                <li>
-                                    <a href="/leaked-password" class="block px-4 py-2 hover:bg-gray-300">Check Leaked
-                                        Password</a>
-                                </li>
-                            </ul>
-                            <div class="py-1">
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300">Contact</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="inline-block px-4 py-2">
-                        <a href="/sign-up" class="text-green-500 hover:text-white border border-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" id="SignUpBtn">Sign Up</a>
-                        <a href="/sign-in" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-green-500 focus:z-10 focus:ring-4 focus:ring-gray-100" id="SignInBtn">Sign In</a>
-                        <button class="hidden py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-green-500 focus:z-10 focus:ring-4 focus:ring-gray-100" id="SignOutBtn">Sign Out</button>
-                    </li>
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <!-- Logo -->
+        <div>
+          <a href="/" class="text-2xl font-bold text-gray-800">CyberSafe</a>
+        </div>
+        <!-- Navigation Links -->
+        <div class="hidden md:block">
+          <ul>
+            <li class="inline-block px-4 py-2 text-gray-700">
+              <a href="/">Home</a>
+            </li>
+            <li class="inline-block px-4 py-2 text-gray-700">
+              <a href="/store">Store</a>
+            </li>
+            <li class="inline-block relative px-4 py-2 text-gray-700">
+              <button
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                onclick="dropdownNavbarLink()"
+                class="flex items-center"
+              >
+                Services
+                <svg
+                  class="w-2.5 h-2.5 ms-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownNavbar"
+                class="z-10 hidden font-normal divide-y bg-white divide-gray-100 rounded-lg shadow w-44 absolute top-10 right-0"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a
+                      href="/generate-strong-password"
+                      class="block px-4 py-2 hover:bg-gray-300"
+                      >Generate Password</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/password-strength-checker"
+                      class="block px-4 py-2 hover:bg-gray-300"
+                      >Check Password Strength</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/leaked-password"
+                      class="block px-4 py-2 hover:bg-gray-300"
+                      >Check Leaked Password</a
+                    >
+                  </li>
                 </ul>
-            </div>
-
-
-            <!-- Mobile Menu Button (Hidden on larger screens) -->
-            <div class="md:hidden">
-                <button class="focus:outline-none" onclick="toggleMenu()">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
+                <div class="py-1">
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300"
+                    >Contact</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li class="inline-block px-4 py-2">
+              <a
+                href="/sign-up"
+                class="text-green-500 hover:text-white border border-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+                id="SignUpBtn"
+                >Sign Up</a
+              >
+              <a
+                href="/sign-in"
+                class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-green-500 focus:z-10 focus:ring-4 focus:ring-gray-100"
+                id="SignInBtn"
+                >Sign In</a
+              >
+              <button
+                class="hidden py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-green-500 focus:z-10 focus:ring-4 focus:ring-gray-100"
+                id="SignOutBtn"
+              >
+                Sign Out
+              </button>
+              <button
+                id="cartBtn"
+                class="relative px-4 py-2 text-gray-700"
+              >
+                <span class="absolute top-0 right-0 bg-red-500 text-white rounded-full px-2 py-1 text-xs" id="cartCount">0</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-6 h-6">
+                  <path
+                    d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                  />
+                </svg>
+              </button>
+            </li>
+          </ul>
         </div>
 
-        <!-- Dropdown menu -->
-        <div id="dropdownNavbarMobile"
-            class="md:hidden z-10 hidden font-normal bg-white divide-y divide-gray-300 rounded-lg shadow w-1/2 absolute top-16 right-0">
-            <ul class="py-2 text-sm text-gray-700">
-                <li>
-                    <a href="/" class="block px-4 py-2 hover:bg-gray-300">Home</a>
-                </li>
-                <li>
-                    <a href="/store" class="block px-4 py-2 hover:bg-gray-300">Store</a>
-                </li>
-                <li>
-                    <a href="/generate-strong-password" class="block px-4 py-2 hover:bg-gray-300">Generate
-                        Password</a>
-                </li>
-                <li>
-                    <a href="/password-strength-checker" class="block px-4 py-2 hover:bg-gray-300">Check Password
-                        Strength</a>
-                </li>
-                <li>
-                    <a href="/leaked-password" class="block px-4 py-2 hover:bg-gray-300">Check Leaked Password</a>
-                </li>
-                <li>
-                    <a href="/contact" class="block px-4 py-2 hover:bg-gray-300">Contact</a>
-                </li>
-                <li class="m-2">
-                    <a href="/sign-up" class="px-3 py-2 text-xs font-bold text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-500 dark:focus:ring-green-700" id="phoneSignUpBtn">Sign Up</a>
-                    <a href="/sign-in" class="px-3 py-2 text-xs font-bold text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-500 dark:focus:ring-green-700" id="phoneSignInBtn">Sign In</a>
-                    <button class="hidden py-2.5 px-5 text-xs font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-green-500 focus:z-10 focus:ring-4 focus:ring-gray-100" id="phoneSignOutBtn">Sign Out</button>
-                </li>
-            </ul>
+        <!-- Mobile Menu Button (Hidden on larger screens) -->
+        <div class="md:hidden">
+          <button class="focus:outline-none" onclick="toggleMenu()">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
         </div>
+      </div>
 
+      <!-- Dropdown menu -->
+      <div
+        id="dropdownNavbarMobile"
+        class="md:hidden z-10 hidden font-normal bg-white divide-y divide-gray-300 rounded-lg shadow w-1/2 absolute top-16 right-0"
+      >
+        <ul class="py-2 text-sm text-gray-700">
+          <li>
+            <a href="/" class="block px-4 py-2 hover:bg-gray-300">Home</a>
+          </li>
+          <li>
+            <a href="/store" class="block px-4 py-2 hover:bg-gray-300">Store</a>
+          </li>
+          <li>
+            <a
+              href="/generate-strong-password"
+              class="block px-4 py-2 hover:bg-gray-300"
+              >Generate Password</a
+            >
+          </li>
+          <li>
+            <a
+              href="/password-strength-checker"
+              class="block px-4 py-2 hover:bg-gray-300"
+              >Check Password Strength</a
+            >
+          </li>
+          <li>
+            <a href="/leaked-password" class="block px-4 py-2 hover:bg-gray-300"
+              >Check Leaked Password</a
+            >
+          </li>
+          <li>
+            <a href="/contact" class="block px-4 py-2 hover:bg-gray-300"
+              >Contact</a
+            >
+          </li>
+          <li class="m-2">
+            <a
+              href="/sign-up"
+              class="px-3 py-2 text-xs font-bold text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-500 dark:focus:ring-green-700"
+              id="phoneSignUpBtn"
+              >Sign Up</a
+            >
+            <a
+              href="/sign-in"
+              class="px-3 py-2 text-xs font-bold text-center text-white bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-500 dark:focus:ring-green-700"
+              id="phoneSignInBtn"
+              >Sign In</a
+            >
+            <button
+              class="hidden py-2.5 px-5 text-xs font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-green-500 focus:z-10 focus:ring-4 focus:ring-gray-100"
+              id="phoneSignOutBtn"
+            >
+              Sign Out
+            </button>
+          </li>
+        </ul>
+      </div>
     </nav>
-    <main class="flex-grow" id="content">
-    </main>
+    <main class="flex-grow" id="content"></main>
 
     <footer class="text-center py-4 border-t border-gray-300 mt-8">
-        <p>&copy; <span id="year"></span> CyberSafe. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> CyberSafe. All rights reserved.</p>
     </footer>
 
-
-    <!-- make a toast -->
-    <div id="toast" class="toast">
-    </div>
-
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
 
     <!-- local scripts -->
     <script>
-        document.getElementById("year").innerText = new Date().getFullYear();
-        function toggleMenu() {
-            var menu = document.getElementById("dropdownNavbarMobile");
-            if (menu.classList.contains("hidden")) {
-                menu.classList.remove("hidden");
-            } else {
-                menu.classList.add("hidden");
-            }
+      document.getElementById("year").innerText = new Date().getFullYear();
+      function toggleMenu() {
+        var menu = document.getElementById("dropdownNavbarMobile");
+        if (menu.classList.contains("hidden")) {
+          menu.classList.remove("hidden");
+        } else {
+          menu.classList.add("hidden");
         }
+      }
 
-        function dropdownNavbarLink() {
-            var menu = document.getElementById("dropdownNavbar");
-            if (menu.classList.contains("hidden")) {
-                menu.classList.remove("hidden");
-            } else {
-                menu.classList.add("hidden");
-            }
+      function dropdownNavbarLink() {
+        var menu = document.getElementById("dropdownNavbar");
+        if (menu.classList.contains("hidden")) {
+          menu.classList.remove("hidden");
+        } else {
+          menu.classList.add("hidden");
         }
+      }
     </script>
 
     <script type="module" src="./js/app.js"></script>
 
     <!--  external scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
-
-</body>
-
+  </body>
 </html>

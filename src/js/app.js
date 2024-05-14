@@ -47,6 +47,12 @@ if (user) {
   phoneSignOutBtn.classList.add("hidden");
 }
 
+// updating cart count
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+cartCount.textContent = cart.length;
+
+
+// managing routes
 if (window.location.pathname === "/generate-strong-password") {
   generatePassword();
 } else if (window.location.pathname === "/password-strength-checker") {
