@@ -17,11 +17,6 @@ let phoneSignUpBtn = document.getElementById("phoneSignInBtn");
 let phoneSignInBtn = document.getElementById("phoneSignUpBtn");
 let phoneSignOutBtn = document.getElementById("phoneSignOutBtn");
 
-SignUpBtn.addEventListener("click", () => {
-  localStorage.removeItem("currentUser");
-  window.location.href = "/sign-in";
-});
-
 SignOutBtn.addEventListener("click", () => {
   localStorage.removeItem("currentUser");
   window.location.href = "/sign-in";
