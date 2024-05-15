@@ -65,7 +65,6 @@ The app dynamically loads content based on the route accessed.
 │       ├── shoppingCart.html
 │       ├── signIn.html
 │       ├── signUp.html
-│       ├── sponsor.html
 │       └── store.html
 └── tailwind.config.js
 
