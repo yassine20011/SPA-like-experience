@@ -10,7 +10,7 @@ export function productDetails() {
     let urlParams = new URLSearchParams(window.location.search);
     let productId = urlParams.get("id");
     console.log(productId);
-    let api = `http://localhost:5050/products/${productId}`;
+    let api = `https://fakestoreapi.com/products/${productId}`;
     await fetch(api)
       .then((response) => response.json())
       .then((data) => {
