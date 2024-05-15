@@ -1,8 +1,10 @@
 # CyberSafe
 
-## App philosophy
+# CyberSafe
 
-The philosophy is to look like a single-page application, but it is not a single-page application, it is a multi-page application, but the app uses express.js to serve the static files to all the routes, so the app can look like a single-page application.
+## App Philosophy
+
+The philosophy of the app is to mimic a single-page application (SPA) even though it's technically a MPA under the hood. It achieves this by using Express.js to serve `index.html` for all routes.
 
 ```javascript
 const express = require("express");
@@ -21,27 +23,56 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
-
 ```
 
-As you can see express.js is serving the static files to all the routes, so the app can look like a single-page application.
+This setup allows the app to appear as a single-page application, regardless of the route accessed.
 
-e.g. if you go to `http://localhost:3000/` or `http://localhost:3000/any-route` you will see the same page.
+If you visit http://localhost:3000/ or http://localhost:3000/any-route, you will see the same page.
 
+However, if you open `index.html` file directly in the browser, the app will not function as expected because it relies on the routing provided by Express.js.
 
-If you open the `index.html` file directly in the browser, you will see the same page, but the app will not work as expected, because the app is using express.js to serve the static files.
+In `index.html` , the app is initialized with a Navbar, main content, and footer, and toast for displaying messages, The main content is dynamically loaded with JavaScript, providing a seamless single-page experience.
 
+The app dynamically loads content based on the route accessed.
 
-on the `index.html` file, you will see that the app is initialized with Navbar, main, and footer, and the main content is loaded with the help of JavaScript. so the app can look like a single-page application.
+## Project Structure
 
+```bash
+.
+├── README.md
+├── src
+│   ├── css
+│   │   └── style.css
+│   ├── index.html
+│   ├── input.css
+│   ├── js
+│   │   ├── app.js
+│   │   ├── generatePassword.js
+│   │   ├── HomeContent.js
+│   │   ├── leakedPassword.js
+│   │   ├── PasswordStrengthChecker.js
+│   │   ├── productDetails.js
+│   │   ├── shoppingCart.js
+│   │   ├── signIn.js
+│   │   ├── signUp.js
+│   │   └── store.js
+│   ├── output.css
+│   └── snippets
+│       ├── 404.html
+│       ├── generatePassword.html
+│       ├── home.html
+│       ├── leakedPassword.html
+│       ├── PasswordStrengthChecker.html
+│       ├── productDetails.html
+│       ├── shoppingCart.html
+│       ├── signIn.html
+│       ├── signUp.html
+│       ├── sponsor.html
+│       └── store.html
+└── tailwind.config.js
 
-The app checks the route and loads the content based on the route, 
-
-## Features
-
-- Users can generate a random password
-- Users can test the strength of their password
-- Users can check if their password has been leaked
+6 directories, 36 files
+```
 
 ## Getting Started
 
@@ -69,7 +100,13 @@ npm install
 3. Start the server
 
 ```bash
-node server.js
+bun server.js
+```
+
+and 
+
+```bash
+bun api.js
 ```
 
 4. Open the browser and go to `http://localhost:3000/`
