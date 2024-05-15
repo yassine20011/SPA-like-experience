@@ -95,7 +95,7 @@ export function shoppingCart() {
 
     let totalPrice = document.getElementById("total-price");
     let shipping = 39.00;
-    let total = cart.reduce((acc, item) => acc + parseFloat(item.price), 0);
+    let total = cart.reduce((counter, item) => counter + parseFloat(item.price), 0);
     totalPrice.textContent = `$${total.toFixed(2)}`;
     let totalWithShipping = total + shipping;
     totalPrice.textContent = `$${totalWithShipping.toFixed(2)}`;
