@@ -1,10 +1,8 @@
-# CyberSafe
-
-# CyberSafe
+# MPA with SPA-like Experience
 
 ## App Philosophy
 
-The philosophy of the app is to mimic a single-page application (SPA) even though it's technically a MPA under the hood. It achieves this by using Express.js to serve `index.html` for all routes.
+The philosophy of the app is to mimic a single-page application (SPA) although it operates as a multi-page application (MPA). It achieves this by using Express.js to serve `index.html` for all routes.
 
 ```javascript
 const express = require("express");
