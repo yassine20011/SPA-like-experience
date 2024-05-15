@@ -50,7 +50,7 @@ export function store() {
 
 
     let productList = document.getElementById("product-list");
-    let api = "https://fakestoreapi.com/products";
+    let api = `http://localhost:5050/products`;
     await fetch(api)
       .then((response) => response.json())
       .then((data) => {

@@ -10,7 +10,7 @@ export function productDetails() {
     let urlParams = new URLSearchParams(window.location.search);
     let productId = urlParams.get("id");
     console.log(productId);
-    let api = `https://fakestoreapi.com/products/${productId}`;
+    let api = `http://localhost:5050/products/${productId}`;
     await fetch(api)
       .then((response) => response.json())
       .then((data) => {
@@ -44,6 +44,12 @@ export function productDetails() {
         let cartCount = document.getElementById("cartCount");
 
         addToCart.addEventListener("click", () => {
+          // check if cart exists
+          let cart = JSON.parse(localStorage.getItem("cart")) || [];
+          let item = cart.find((product) => product.id === productId);
+          if (item) {
+            return;
+          }
           cart.push(product);
           localStorage.setItem("cart", JSON.stringify(cart));
           cartCount.textContent = cart.length;

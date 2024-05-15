@@ -6,7 +6,7 @@ import { signIn } from "./signIn.js";
 import { signUp } from "./signUp.js";
 import { store } from "./store.js";
 import { productDetails } from "./productDetails.js";
-
+import { shoppingCart } from "./shoppingCart.js";
 
 let user = JSON.parse(localStorage.getItem("currentUser"));
 
@@ -75,7 +75,9 @@ if (window.location.pathname === "/generate-strong-password") {
   store();
 } else if  (window.location.pathname === "/product-details") {
   productDetails();
-
+}
+else if (window.location.pathname === "/cart") {
+  shoppingCart();
 }
 else {
   document.addEventListener("DOMContentLoaded", async () => {
